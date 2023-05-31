@@ -7,15 +7,17 @@ namespace Bored.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IBoredRepository _repo;
+        public HomeController(ILogger<HomeController> logger, IBoredRepository repo)
         {
             _logger = logger;
+            _repo = repo;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var quote = _repo.GetIt();
+            return View(quote);
         }
 
         public IActionResult Privacy()
@@ -28,5 +30,6 @@ namespace Bored.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
