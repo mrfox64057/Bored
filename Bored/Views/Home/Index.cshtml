@@ -4,7 +4,86 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">@Model.Activity</h1>
+<style>
+    body {
+        background-color: #f4f0ff;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: #f8f8f8;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+        background-color: #8c70ff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #f8f8f8;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        color: #ffffff;
+        background-color: #6a50ff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: #6a50ff;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .cta-button:hover {
+            background-color: #7e61ff;
+        }
+</style>
+
+<div class="container">
+    <div class="logo">
+        <span>Your Logo</span>
+    </div>
+    <h1>@Model.Activity</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p class="subtitle">Start creating amazing web applications!</p>
+    <a href="#" class="cta-button">Get Started</a>
 </div>
+
+
+//Make more pages
