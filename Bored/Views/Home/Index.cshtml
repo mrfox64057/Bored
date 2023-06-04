@@ -1,23 +1,43 @@
-﻿@model DoThis 
+﻿@model DoThis
 
-@{
-    ViewData["Title"] = "Home Page";
-}
-
-
-
-<div class="container">
-    <div class="logo">
-        <span>Your Logo</span>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css">
+</head>
+<body>
+    
+    <img src="~/mypictures/pexels-markus-spiske-110874.jpg" />
+    <div class="container">
+        <div class="logo">
+            <span>Your Logo</span>
+        </div>
+        <h1>@Model.Activity</h1>
+        @if (Model.Link != "")
+        {
+            <p>Learn about this random <a href="@Model.Link">activity</a>.</p>
+        }
+        <p class="subtitle"></p>
     </div>
-    <h1>@Model.Activity</h1>
-    @if (Model.Link != "")
-    {
-      <p>Learn about <a href="@Model.Link">random activity link</a>.</p>       
-    }
-    <p class="subtitle">Start creating amazing web applications!</p>
-    <a href="/Home/Index" class="cta-button">Get Started</a>
-</div>
+
+    <footer class="footer">
+        <div class="game-container">
+            <p class="subtitle" id="subtitle">Are you still bored?</p>
+            <button id="yes-button">Yes</button>
+            <button id="no-button">No</button>
+        </div>
+
+        <div class="privacy-container">
+            <a href="/Home/Privacy" class="privacy-link">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="~/scripts/script.js"></script>
+</body>
+</html>
 
 
-//Make more pages
+
+
+
+
