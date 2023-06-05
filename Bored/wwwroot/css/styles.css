@@ -1,0 +1,170 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    width: 100%;
+    border-bottom: #eee solid 1px;
+}
+
+nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #1a1e21;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+main {
+    /*Keeps the main content start point at the top*/
+    height: 100%;
+    margin-bottom: auto;
+}
+
+.home-page .hero {
+    margin-top: 190px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.home-page {
+    margin-top: auto;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*Last value controls opacity (or darkness)*/
+    background: rgba(0, 0, 0, 0.50);
+}
+
+.home-page .background-img {
+    position: absolute;
+    /*puts the background image behind the text*/
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.home-page .heading {
+    font-size: 32px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.home-page .activity {
+    font-weight: 400;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.home-page .main {
+    margin: 100px auto;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 700px;
+    height: 100%;
+    z-index: 1;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.80);
+}
+
+.home-page .learn-more {
+    display: flex;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.home-page .refresh-link {
+    margin: 50px auto 50px;
+    font-size: 18px;
+    background-color: #73eccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    width: max-content;
+}
+
+.home-page button {
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.still-bored p {
+    font-size: 18px;
+    display: flex;
+}
+
+.still-bored {
+    margin: 0 auto;
+}
+
+.still-bored .btn-group {
+    display: flex;
+    column-gap: 30px;
+}
+
+#yes-button {
+}
+
+#no-button {
+}
+
+.learn-more a {
+    text-decoration: underline;
+    color: white;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    padding: 40px 20px;
+    background: #ffffff;
+    color: #00000075;
+    border-top: #eee solid 1px;
+}
+
+/*Hides the audio element. The audio is controlled by javascript at the index*/
+#audio-track {
+    visibility: hidden;
+}
