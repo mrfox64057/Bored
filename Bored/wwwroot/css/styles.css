@@ -40,6 +40,21 @@ main {
     margin-bottom: auto;
 }
 
+.home-page .hero {
+    margin-top: 190px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
 
 .home-page {
     margin-top: auto;
@@ -50,6 +65,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*Last value controls opacity (or darkness)*/
+    background: rgba(0, 0, 0, 0.50);
 }
 
 .home-page .background-img {
@@ -83,9 +100,8 @@ main {
     z-index: 1;
     padding: 40px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.65);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.80);
 }
 
 .home-page .learn-more {
@@ -125,22 +141,19 @@ main {
 
 .still-bored .btn-group {
     display: flex;
+    column-gap: 30px;
 }
 
 #yes-button {
-    background: gray;
-    margin-right: 50px;
 }
 
 #no-button {
-    background: red;
 }
 
 .learn-more a {
     text-decoration: underline;
     color: white;
 }
-
 
 footer {
     float: left;
@@ -149,4 +162,9 @@ footer {
     background: #ffffff;
     color: #00000075;
     border-top: #eee solid 1px;
+}
+
+/*Hides the audio element. The audio is controlled by javascript at the index*/
+#audio-track {
+    visibility: hidden;
 }

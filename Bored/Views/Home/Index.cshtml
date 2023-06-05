@@ -10,21 +10,38 @@
 
 <div class="home-page">
     <img alt="raindrops on a window" class="background-img" src="~/mypictures/pexels-markus-spiske-110874.jpg"/>
-    <div class="main">
-        <h1 class="heading">Are you bored?</h1>
+    <header class="hero">
+        <h1>Welcome to last Bored API</h1>
+        <h2>View an interesting activity when you have nothing else to do.</h2>
+    </header>
+    <section class="main">
+        <adamsTag class="heading">Are you bored?</adamsTag>
         <h2 class="activity">@Model.Activity</h2>
         @if (Model.Link != "")
         {
             <p class="learn-more">Learn about this random&nbsp;<a href="@Model.Link">activity</a>.</p>
         }
         <a class="refresh-link" href="/">New Activity</a>
-        @* <div class="still-bored"> *@
-        @*     <p class="subtitle" id="subtitle">Are you still bored?</p> *@
-        @*     <div class="btn-group"> *@
-        @*         <button id="yes-button">Yes</button> *@
-        @*         <button id="no-button">No</button> *@
-        @*     </div> *@
-        @* </div> *@
-    </div>
+        <div class="still-bored">
+            <div class="btn-group">
+                <button id="yes-button">Still bored?</button>
+            </div>
+        </div>
+        <audio id="audio-track" controls>
+            <source src="MySounds/401277__inspectorj__rain-moderate-a.wav" type="audio/wav">
+            <source src="" type="audio/ogg">
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
 </div>
 <script src="~/scripts/script.js"></script>
+
+@* https://developer.mozilla.org/en-US/docs/Web/Events *@
+<script>
+    function playAudio(){
+       const audioElement = document.getElementById("audio-track");
+       audioElement.play(); 
+    }
+    document.addEventListener("scroll", playAudio);
+</script>
