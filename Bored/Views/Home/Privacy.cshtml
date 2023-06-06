@@ -7,4 +7,37 @@
     Layout = "_Layout";
 }
 
-<p>Use this page to detail your site's privacy policy.</p>
+<link rel="stylesheet" href="styles.css">
+<div class="privacy-page">
+    <img alt="angry man" class="angry-img" src="~/mypictures/angry-old-man_380.jpg" />
+    <img alt="grass" class="grass" src="~/mypictures/how-to-aerate-your-lawn-hero-a.jpg" />
+    <header class="zero">
+        <h1>Who invited you here?</h1>
+        <h2></h2>
+    </header>
+    <section class="privacy-main">
+        <audio id="audio-track2" controls>
+            <source src="~/mysounds/464185__hootowl__get-off-my-lawn.m4a" type="audio/wav">
+            <source src="" type="audio/ogg">
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+</div>
+
+<script>
+    function playAudio() {
+        const audioElement = document.getElementById("audio-track2");
+        audioElement.play();
+    }
+    document.addEventListener("scroll", playAudio);
+</script>
+
+@* https://developer.mozilla.org/en-US/docs/Web/Events *@
+<script>
+    function playAudio() {
+        const audioElement = document.getElementById("audio-track2");
+        audioElement.play();
+    }
+    document.addEventListener("scroll", playAudio);
+</script>
